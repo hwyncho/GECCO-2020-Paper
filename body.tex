@@ -1,4 +1,4 @@
-% Section 1
+%% Section 1
 \section{Introduction}
 \label{sec:introduction}
 A class imbalanced dataset refers to a dataset in which the ratios of data belonging to different classes are not equal but are skewed to one side.
@@ -15,7 +15,7 @@ In this study, a genetic algorithm (GA) is used to search for various combinatio
 This paper is organized as follows: in Section~\ref{sec:ga}, the proposed GA-based oversampling ratio optimization method is explained, and in Section~\ref{sec:experiments-results}, the experiments and results are discussed. Finally, the paper is concluded in Section~\ref{sec:conclusion}.
 
 
-% Section 2
+%% Section 2
 \section{Genetic Algorithm}
 \label{sec:ga}
 \textbf{Encoding:} a chromosome refers to a combination of oversampling ratios obtained using various techniques.
@@ -37,7 +37,7 @@ In other words, two techniques are selected, and the oversampling ratios of thes
 \end{figure}
 
 
-% Section 3
+%% Section 3
 \section{Experiments and Results}
 \label{sec:experiments-results}
 We used a credit card fraud detection dataset in the experiments.
@@ -57,7 +57,7 @@ Each generation had a population size of 128, and a total of 100 generations wer
 Furthermore, 16 parents were selected in each generation and 16 offspring were transferred to the next generation.
 The probability of mutation was 1\%.
 The performance of the trained classifier was compared with that of a classifier trained by oversampling with the optimal combination searched using the GA, and that of a classifier trained by oversampling using a strategy characterized by a certain ratio (the ratio was set to $200\%$ with an increase of 381, 300\% with an increase of 762, 400\% with an increase of 1143, and 500\% with an increase of 1,524).
-Our code for this paper and experiment is on \emph{GitHub}\footnote{https://github.com/hwyncho/GECCO-2020.git/}.\\
+Our code for this paper and experiment is on \emph{GitHub}\footnote{https://github.com/hwyncho/GECCO-2020-PyTorch.git/}.\\
 As described in Section~\ref{sec:ga}, we evaluated the trained classifier with the training dataset and calculated the $\emph{F}_{1}$ score as the fitness.
 Table~\ref{tab:1} shows the results of comparing the $\emph{F}_{1}$ scores of the scenario where the imbalanced dataset was trained, that in which 13 techniques with four fixed ratios were used, and that in which the data sampled was trained with a ratio optimized using the GA.
 When the GA was used, the performance was better than those in all other cases.
@@ -83,7 +83,7 @@ When the GA was used, the performance was better than those in all other cases.
 \end{table}
 
 
-% Section 4
+%% Section 4
 \section{Conclusion}
 \label{sec:conclusion}
 In this study, we used the GA to explore and optimize the combination of oversampling ratios for each strategy using SMOTE and GAN.
